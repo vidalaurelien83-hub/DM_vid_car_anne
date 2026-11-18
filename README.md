@@ -1,13 +1,28 @@
-12/11/2016
-Hello les amis j'ai initialisé le git avec le dataset telechargé dans `load_data.py` et le `requirement.txt`.
+# DM2 - AdaBoost sur MNIST
 
-Partie classification chiffre à chiffre
+Ce dépôt contient les expériences du devoir de machine learning sur la
+classification des chiffres manuscrits MNIST avec AdaBoost. Plusieurs
+classifieurs faibles sont comparés (perceptron, stump et arbres de décision),
+dans l'espace des pixels et dans un embedding de dimension réduite.
 
-coucou les copains, l'ensemble de ce que j'ai fait est dans /classification chiffre à chiffre
+## Organisation
 
-Il y a deux notebook :
-1 de présentation du  travail pour 1vs7 et 3vs8 et une présentation des résultats globaux.
+- `0_classification chiffre à chiffre/` : expériences de classification paire
+  par paire, résultats et figures associées.
+- `1_Un chiffre contre tous/` : notebook et modèles sauvegardés pour les dix
+  problèmes « un chiffre contre tous ».
+- `2_Par tranches/` : classification des tranches `0--4` contre `5--9`.
+- `src/` : fonctions utilitaires, notamment le chargement de MNIST.
+- `data/` : données téléchargées ou mises en cache par OpenML.
+  rapport.
+- `Rapport.pdf` et `Sujet.pdf` : rapport final et énoncé du devoir.
+- `requirement.txt` : dépendances Python du projet.
 
-1 notebook etude_complete qui fait l'analyse pour les 45 combinaisons de chiffre. 
+## Installation
+dans un venv:
+```bash
+pip install -r requirement.txt
+```
 
-Tous les résultats de cette analyses sont dans résultats et les figures dans figures.
+Les expériences sont exécutées dans les notebooks Jupyter présents dans les
+répertoires correspondants.
